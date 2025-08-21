@@ -9,6 +9,7 @@ echo "Number of files in the current directory: $count"
 echo "Select below options to choose files:"
 echo "1. .txt Files"
 echo "2. .sh Files"
+echo "3. .png Files"
 read fil
 
 # Check choice
@@ -18,8 +19,11 @@ if [ "$fil" -eq 1 ]; then
 elif [ "$fil" -eq 2 ]; then
     echo "You selected .sh files"
     ls *.sh 2>/dev/null
+elif [ "$fil" -eq 3 ]; then
+	echo "You selected .png files"
+	ls *.png 2>/dev/null
 else
-    echo "Invalid choice! Please enter 1 or 2."
+    echo "Invalid choice! Please enter 1, 2 or 3."
 fi
 
 
